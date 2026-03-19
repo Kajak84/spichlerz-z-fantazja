@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kajak84.github.io/Spichlerz-z--fantazja/sitemap.xml
+Sitemap: https://kajak84.github.io/spichlerz-z-fantazja/sitemap.xml
