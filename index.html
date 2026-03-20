@@ -181,10 +181,44 @@ sections.forEach(sec => observer.observe(sec));
 function setLanguage(lang) {
   document.documentElement.lang = lang;
   const translations = {
-    pl:{ title:"Spichlerz z Fantazją", subtitle:"Tradycja, smak i atmosfera w samym sercu Braniewa", aboutTitle:"O nas", aboutText:"Restauracja „Spichlerz z Fantazją” to wyjątkowe miejsce, łączące historię z nowoczesnością...", nasz: "Nasze danie dnia", scan:"📲 Zeskanuj, aby zobaczyć menu" },
-    en:{ title:"Spichlerz z Fantazją", subtitle:"Tradition, taste and atmosphere in the heart of Braniewo", aboutTitle:"About Us", aboutText:"The 'Spichlerz z Fantazją' restaurant is a unique place that combines history with modernity...", nasz: "Our dish of the day", scan:"📲 Scan to see the menu" },
-    de:{ title:"Spichlerz z Fantazją", subtitle:"Tradition, Geschmack und Atmosphäre im Herzen von Braniewo", aboutTitle:"Über uns", aboutText:"Das Restaurant 'Spichlerz z Fantazją' ist ein einzigartiger Ort, der Geschichte mit Moderne verbindet...", nasz: "Unser Tagesgericht", scan:"📲 Scannen Sie, um das Menü zu sehen" },
-    ua:{ title:"Spichlerz z Fantazją", subtitle:"Традиції, смак та атмосфера в самому серці Бранево", aboutTitle:"Про нас", aboutText:"Ресторан 'Спичлерз z Fantazją' – унікальне місце, що поєднує історію з сучасністю...", nasz: "Наша страва дня", scan:"📲 Скануйте, щоб побачити меню" }
+    pl:{ title:"Spichlerz z Fantazją", subtitle:"Tradycja, smak i atmosfera w samym sercu Braniewa", aboutTitle:"O nas", aboutText:"Restauracja Spichlerz z Fantazją w Braniewie to jedno z najbardziej rozpoznawalnych miejsc gastronomicznych w mieście. Lokal znajduje się w historycznym spichlerzu i od wielu lat przyciąga zarówno mieszkańców Braniewa, jak i turystów odwiedzających region.
+
+Osoby szukające informacji o restauracji najczęściej wpisują w Google frazy takie jak spichlerz braniewo, restauracja spichlerz braniewo, spichlerz z fantazją Braniewo czy gdzie zjeść w Braniewie. Ta strona została przygotowana właśnie po to, aby w jednym miejscu można było znaleźć wszystkie najważniejsze informacje o restauracji Spichlerz z Fantazją w Braniewie.
+
+W restauracji Spichlerz z Fantazją można zjeść tradycyjne dania kuchni polskiej, obiady domowe, a także potrawy przygotowywane na specjalne okazje. Restauracja często wybierana jest na rodzinne obiady, spotkania ze znajomymi oraz różnego rodzaju uroczystości okolicznościowe.
+
+Dużą zaletą restauracji Spichlerz z Fantazją w Braniewie jest jej wyjątkowy klimat oraz lokalizacja w zabytkowym budynku spichlerza. Dzięki temu jest to jedno z najczęściej wyszukiwanych miejsc gastronomicznych w Braniewie.
+
+Jeżeli szukasz miejsca na obiad w Braniewie albo chcesz sprawdzić menu restauracji Spichlerz z Fantazją, jesteś w dobrym miejscu. Restauracja od lat cieszy się popularnością i jest jednym z najbardziej znanych lokali gastronomicznych w Braniewie.", nasz: "Nasze danie dnia", scan:"📲 Zeskanuj, aby zobaczyć menu" },
+    en:{ title:"Spichlerz z Fantazją", subtitle:"Restaurant Spichlerz z Fantazją in Braniewo is one of the most well-known dining places in the city. The restaurant is located in a historic granary building and for many years has attracted both residents of Braniewo and tourists visiting the region.
+
+People searching for information about the restaurant most often type phrases in Google such as “spichlerz braniewo”, “restaurant spichlerz braniewo”, “spichlerz z fantazją Braniewo” or “where to eat in Braniewo”. This website was created to provide all the most important information about the Restaurant Spichlerz z Fantazją in Braniewo in one place.
+
+At Restaurant Spichlerz z Fantazją you can enjoy traditional Polish cuisine, home-style meals, as well as dishes prepared for special occasions. The restaurant is often chosen for family lunches, meetings with friends and various special events.
+
+A big advantage of Restaurant Spichlerz z Fantazją in Braniewo is its unique atmosphere and location in a historic granary building. Thanks to this, it is one of the most frequently searched dining places in Braniewo.
+
+If you are looking for a place to eat in Braniewo or want to check the menu of Restaurant Spichlerz z Fantazją, you are in the right place. The restaurant has been popular for many years and is one of the most recognizable dining places in Braniewo.", nasz: "Our dish of the day", scan:"📲 Scan to see the menu" },
+    de:{ title:"Spichlerz z Fantazją", subtitle:"Tradition, Geschmack und Atmosphäre im Herzen von Braniewo", aboutTitle:"Über uns", aboutText:"Das Restaurant Spichlerz z Fantazją in Braniewo ist eines der bekanntesten gastronomischen Lokale in der Stadt. Das Restaurant befindet sich in einem historischen Speichergebäude und zieht seit vielen Jahren sowohl Einwohner von Braniewo als auch Touristen an, die die Region besuchen.
+
+Personen, die nach Informationen über das Restaurant suchen, geben in Google am häufigsten Suchbegriffe wie „spichlerz braniewo“, „restaurant spichlerz braniewo“, „spichlerz z fantazją Braniewo“ oder „wo kann man in Braniewo essen“ ein. Diese Website wurde erstellt, damit man alle wichtigsten Informationen über das Restaurant Spichlerz z Fantazją in Braniewo an einem Ort finden kann.
+
+Im Restaurant Spichlerz z Fantazją kann man traditionelle polnische Küche, Hausmannskost sowie Gerichte für besondere Anlässe genießen. Das Restaurant wird häufig für Familienessen, Treffen mit Freunden sowie verschiedene Feierlichkeiten gewählt.
+
+Ein großer Vorteil des Restaurants Spichlerz z Fantazją in Braniewo ist seine besondere Atmosphäre und die Lage in einem historischen Speichergebäude. Dadurch gehört es zu den am häufigsten gesuchten Restaurants in Braniewo.
+
+Wenn du nach einem Ort zum Essen in Braniewo suchst oder das Menü des Restaurants Spichlerz z Fantazją überprüfen möchtest, bist du hier genau richtig. Das Restaurant ist seit vielen Jahren sehr beliebt und gehört zu den bekanntesten gastronomischen Lokalen in Braniewo.", nasz: "Unser Tagesgericht", scan:"📲 Scannen Sie, um das Menü zu sehen" },
+  
+   
+    ua:{ title:"Spichlerz z Fantazją", subtitle:"Традиції, смак та атмосфера в самому серці Бранево", aboutTitle:"Про нас", aboutText:"Ресторан Spichlerz z Fantazją у Бранево є одним із найвідоміших закладів харчування в місті. Ресторан знаходиться в історичній будівлі старого зерносховища і вже багато років приваблює як мешканців Бранево, так і туристів, які відвідують цей регіон.
+
+Люди, які шукають інформацію про ресторан, найчастіше вводять у Google такі запити, як „spichlerz braniewo“, „restaurant spichlerz braniewo“, „spichlerz z fantazją Braniewo“ або „де поїсти в Бранево“. Цей сайт був створений для того, щоб у одному місці можна було знайти всю найважливішу інформацію про ресторан Spichlerz z Fantazją у Бранево.
+
+У ресторані Spichlerz z Fantazją можна скуштувати традиційні страви польської кухні, домашні обіди, а також страви, приготовані для особливих подій. Ресторан часто обирають для сімейних обідів, зустрічей з друзями та різних святкових заходів.
+
+Великою перевагою ресторану Spichlerz z Fantazją у Бранево є його унікальна атмосфера та розташування в історичній будівлі зерносховища. Завдяки цьому це один із найчастіше шуканих ресторанів у Бранево.
+
+Якщо ви шукаєте місце, де поїсти в Бранево, або хочете перевірити меню ресторану Spichlerz z Fantazją, ви в правильному місці. Ресторан уже багато років користується популярністю і є одним із найвідоміших закладів харчування в Бранево.", nasz: "Наша страва дня", scan:"📲 Скануйте, щоб побачити меню" }
   };
   document.querySelectorAll('[data-i18n]').forEach(el=>{
     const key = el.getAttribute('data-i18n');
