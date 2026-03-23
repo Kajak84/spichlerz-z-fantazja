@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.getElementById("catering-zima");
     const month = new Date().getMonth() + 1;
     if (!section) return;
-    if (month === 03) {
+    if (month === 3 || month === 12) { 
         section.classList.remove("hidden");
         section.style.opacity = "0";
         section.style.transform = "translateY(30px)";
