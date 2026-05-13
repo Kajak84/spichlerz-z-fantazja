@@ -3,330 +3,399 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title data-i18n="title">Spichlerz z Fantazją</title>
-<meta name="description" content="Restauracja Spichlerz z Fantazją w Braniewie – tradycja, smak i atmosfera w samym sercu miasta. Zobacz menu, wydarzenia i kontakt.">
-<meta name="keywords" content="restauracja, Braniewo, menu, Spichlerz z Fantazją, wydarzenia, kontakt">
+
+<title>Restauracja Spichlerz z Fantazją | Braniewo</title>
+
+<meta name="description" content="Spichlerz z Fantazją – restauracja w Braniewie. Tradycyjna kuchnia polska, obiady domowe, wydarzenia i wyjątkowy klimat zabytkowego spichlerza.">
+
+<meta name="keywords" content="restauracja Braniewo, Spichlerz z Fantazją, obiady Braniewo, gdzie zjeść Braniewo">
+
 <meta name="author" content="Spichlerz z Fantazją">
 <meta name="robots" content="index, follow">
 
+<link rel="canonical" href="https://kajak84.github.io/spichlerz-z-fantazja/">
+
+<meta property="og:title" content="Spichlerz z Fantazją Braniewo">
+<meta property="og:description" content="Tradycyjna kuchnia i wyjątkowy klimat w centrum Braniewa">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kajak84.github.io/spichlerz-z-fantazja/">
+<meta property="og:image" content="https://kajak84.github.io/spichlerz-z-fantazja/img/menu.jpg">
+
 <style>
-body { font-family: Arial, sans-serif; margin: 0; background-color: #e4d09b; overflow-x: hidden; }
-header { background-color: #000; color: white; padding: 20px; text-align: center; }
-.hero-image { width: 100%; display: flex; justify-content: center; margin: 20px 0; overflow: hidden; height: 400px; }
-.hero-image img { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-.hero { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 20px; }
-.hero a img { width: 300px; height: auto; border-radius: 10px; object-fit: cover; transition: transform 0.5s ease, filter 0.5s ease; }
-.hero a img:hover { transform: scale(1.08) rotateY(3deg); filter: brightness(1.1); }
-.section { padding: 40px; text-align: center; opacity: 1; transform: translateY(30px); transition: all 1s ease; }
-.section.visible { opacity: 1; transform: translateY(0); }
-.about { background-color: #fef3e2; }
-.daily-special h1 { color: #fff; }
-.daily-special { background-color: #000; }
-#qr { background-color: rgba(254, 243, 226, 1); }
-footer { background:#000; color:#FFF; padding:20px; text-align:center; }
-
-/* LANGUAGE SWITCHER */
-.language-switcher { position: fixed; top: 10px; right: 10px; z-index: 1002; background: rgba(255, 255, 255, 0.9); padding: 6px 10px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-.language-switcher img { width: 28px; margin: 0 5px; cursor: pointer; opacity: 0.8; transition: opacity 0.3s, border 0.3s; vertical-align:middle; }
-.language-switcher img:hover { opacity: 1; }
-.language-switcher img.active { border: 2px solid #000; opacity: 1; border-radius: 4px; }
-
-/* SEASON SWITCHER */
-.season-switcher {
-  position: fixed;
-  top: 60px;
-  right: 10px;
-  z-index: 1002;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  background: transparent;
-}
-.season-switcher button {
-  padding: 6px 10px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  background: rgba(255,255,255,0.95);
-  transition: 0.2s;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
-}
-.season-switcher button:hover { background: #000; color: #fff; }
-
-.hidden { display: none !important; }
-
-/* SPADAJĄCE LIŚCIE */
-.leaves-area { position:fixed; inset:0; pointer-events:none; z-index:999; }
-.leaf { position:absolute; top:-10vh; will-change: transform, opacity; opacity:0.95; display:block; }
-@keyframes fall {
-  0%{ transform: translateY(-10vh) rotate(var(--start-rot)); opacity:0.8; }
-  50%{ transform: translateY(50vh) rotate(calc(var(--start-rot) + var(--spin-deg)/2)); opacity:0.9; }
-  100%{ transform: translateY(calc(100vh - 10px)) rotate(calc(var(--start-rot) + var(--spin-deg))); opacity:1; }
-}
-@keyframes sway {
-  0%{ transform: translateX(0) rotate(0deg); }
-  25%{ transform: translateX(var(--sway-offset)) rotate(10deg); }
-  50%{ transform: translateX(0) rotate(-10deg); }
-  75%{ transform: translateX(calc(-1 * var(--sway-offset))) rotate(5deg); }
-  100%{ transform: translateX(0) rotate(0deg); }
+body{
+  font-family:Arial,sans-serif;
+  margin:0;
+  background-color:#e4d09b;
+  overflow-x:hidden;
 }
 
-/* ŚNIEG */
-.snowflake {
-  position: fixed;
-  top: -10px;
-  color: #fff;
-  font-size: 12px;
-  user-select: none;
-  pointer-events: none;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.6));
-  z-index: 1001;
-  animation-timing-function: linear;
-  will-change: transform, opacity;
+header{
+  background:#000;
+  color:#fff;
+  padding:20px;
+  text-align:center;
 }
 
-@keyframes snowFall {
-  0% { transform: translateY(-10vh); opacity:0.9; }
-  100% { transform: translateY(100vh); opacity:1; }
+.hero-image{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+  overflow:hidden;
+  height:400px;
 }
 
-@media(max-width:480px){ 
-  .hero a img { width: 200px; } 
-  iframe { width: 100% !important; height: 500px !important; } 
-  .hero-image { height: 250px; } 
+.hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:20px;
+}
+
+.hero a img{
+  width:300px;
+  border-radius:10px;
+  transition:0.4s;
+}
+
+.hero a img:hover{
+  transform:scale(1.05);
+}
+
+.section{
+  padding:40px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(30px);
+  transition:1s;
+}
+
+.section.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.about{
+  background:#fef3e2;
+  line-height:1.8;
+}
+
+.daily-special{
+  background:#000;
+  color:#fff;
+}
+
+#qr{
+  background:#fef3e2;
+}
+
+footer{
+  background:#000;
+  color:#fff;
+  padding:20px;
+  text-align:center;
+}
+
+.language-switcher{
+  position:fixed;
+  top:10px;
+  right:10px;
+  z-index:1000;
+  background:rgba(255,255,255,0.9);
+  padding:6px 10px;
+  border-radius:8px;
+}
+
+.language-switcher img{
+  width:28px;
+  cursor:pointer;
+  margin:0 5px;
+  opacity:0.8;
+}
+
+.language-switcher img.active{
+  border:2px solid #000;
+  border-radius:4px;
+  opacity:1;
+}
+
+.hidden{
+  display:none !important;
+}
+
+@media(max-width:480px){
+
+  .hero a img{
+    width:200px;
+  }
+
+  .hero-image{
+    height:250px;
+  }
+
+  iframe{
+    width:100% !important;
+    height:500px !important;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<div class="language-switcher" aria-hidden="false">
-  <img src="flags/pl.svg" alt="pl" onclick="setLanguage('pl')" />
-  <img src="flags/gb.svg" alt="en" onclick="setLanguage('en')" />
-  <img src="flags/de.svg" alt="de" onclick="setLanguage('de')" />
-  <img src="flags/ua.svg" alt="ua" onclick="setLanguage('ua')" />
-</div>
-
-<div class="season-switcher" aria-hidden="false">
-  <button onclick="setSeason('spring')">🌸 Wiosna</button>
-  <button onclick="setSeason('summer')">🌿 Lato</button>
-  <button onclick="setSeason('autumn')">🍂 Jesień</button>
-  <button onclick="setSeason('winter')">❄️ Zima</button>
+<div class="language-switcher">
+  <img src="flags/pl.svg" alt="pl" onclick="setLanguage('pl')">
+  <img src="flags/gb.svg" alt="en" onclick="setLanguage('en')">
+  <img src="flags/de.svg" alt="de" onclick="setLanguage('de')">
+  <img src="flags/ua.svg" alt="ua" onclick="setLanguage('ua')">
 </div>
 
 <header>
   <h1 data-i18n="title">Spichlerz z Fantazją</h1>
-  <p data-i18n="subtitle">Tradycja, smak i atmosfera w samym sercu Braniewa</p>
+
+  <p data-i18n="subtitle">
+    Tradycja, smak i atmosfera w samym sercu Braniewa
+  </p>
 </header>
 
 <section class="hero-image">
-  <img src="img/Spichlerz_Mariacki_ul_Portowa_Braniewo_7726036.jpg" alt="Restauracja">
+  <img
+    src="img/Spichlerz_Mariacki_ul_Portowa_Braniewo_7726036.jpg"
+    alt="Restauracja Spichlerz z Fantazją Braniewo"
+  >
 </section>
 
 <section class="hero">
-  <a href="menu.html"><img src="img/menu.jpg" alt="Menu restauracji Spichlerz z Fantazją"></a>
-  <a href="kontakt.html"><img src="img/kontakt.jpg" alt="Kontakt do restauracji Spichlerz z Fantazją"></a>
+
+  <a href="menu.html">
+    <img
+      src="img/menu.jpg"
+      alt="Menu restauracji Spichlerz z Fantazją"
+    >
+  </a>
+
+  <a href="kontakt.html">
+    <img
+      src="img/kontakt.jpg"
+      alt="Kontakt restauracja Braniewo"
+    >
+  </a>
+
 </section>
 
 <section class="section about">
-  <h2 data-i18n="aboutTitle">O nas</h2>
-  <p data-i18n="aboutText">Restauracja Spichlerz z Fantazją w Braniewie to jedno z najbardziej rozpoznawalnych miejsc gastronomicznych w mieście. Lokal znajduje się w historycznym spichlerzu i od wielu lat przyciąga zarówno mieszkańców Braniewa, jak i turystów odwiedzających region.
 
-Osoby szukające informacji o restauracji najczęściej wpisują w Google frazy takie jak spichlerz braniewo, restauracja spichlerz braniewo, spichlerz z fantazją Braniewo czy gdzie zjeść w Braniewie. Ta strona została przygotowana właśnie po to, aby w jednym miejscu można było znaleźć wszystkie najważniejsze informacje o restauracji Spichlerz z Fantazją w Braniewie.
+<h2 data-i18n="aboutTitle">O nas</h2>
 
-W restauracji Spichlerz z Fantazją można zjeść tradycyjne dania kuchni polskiej, obiady domowe, a także potrawy przygotowywane na specjalne okazje. Restauracja często wybierana jest na rodzinne obiady, spotkania ze znajomymi oraz różnego rodzaju uroczystości okolicznościowe.
+<p data-i18n="aboutText">
+Restauracja Spichlerz z Fantazją w Braniewie to wyjątkowe miejsce,
+które od lat przyciąga mieszkańców i turystów.
 
-Dużą zaletą restauracji Spichlerz z Fantazją w Braniewie jest jej wyjątkowy klimat oraz lokalizacja w zabytkowym budynku spichlerza. Dzięki temu jest to jedno z najczęściej wyszukiwanych miejsc gastronomicznych w Braniewie.
+Lokal mieści się w zabytkowym spichlerzu i oferuje tradycyjne dania
+kuchni polskiej, obiady domowe oraz potrawy na specjalne okazje.
 
-Jeżeli szukasz miejsca na obiad w Braniewie albo chcesz sprawdzić menu restauracji Spichlerz z Fantazją, jesteś w dobrym miejscu. Restauracja od lat cieszy się popularnością i jest jednym z najbardziej znanych lokali gastronomicznych w Braniewie.</p>
+To idealne miejsce na rodzinny obiad, spotkanie ze znajomymi
+lub organizację uroczystości.
+</p>
+
 </section>
 
 <section class="section daily-special">
-  <h1 data-i18n="nasz">Nasze danie dnia</h1>
-  <div id="daily-special-container">
-    <div class="fb-post" data-href="https://www.facebook.com/fantazjabraniewo/posts/pfbid02qbiMBa7EtoxXPFoj5qs9V1YxuB4XY9zpnCL6kHCgEHtcMfssrQ4LXJg1pYpu7uJGl" data-width="600"></div>
-  </div>
+
+<h2 data-i18n="dish">
+Nasze danie dnia
+</h2>
+
+<div id="daily-special-container">
+
+<div
+class="fb-post"
+data-href="https://www.facebook.com/fantazjabraniewo/posts/pfbid02qbiMBa7EtoxXPFoj5qs9V1YxuB4XY9zpnCL6kHCgEHtcMfssrQ4LXJg1pYpu7uJGl"
+data-width="600">
+</div>
+
+</div>
 </section>
 
-<section id="catering-zima" class="section hidden ">
-  <h1 data-i18n="catering_s">Catering Świąteczny</h1>
-  <div class="fb-post" data-href="https://www.facebook.com/fantazjabraniewo/posts/pfbid0882yffM23HZJ6puJBQuRYCjvyrdfVBgYF9G63t1UUDU7A1Y8hTLDJZxK7JcM8ES2l" data-width="600"></div>
+<section id="catering-zima" class="section hidden">
+
+<h2>Catering Świąteczny</h2>
+
+<div
+class="fb-post"
+data-href="https://www.facebook.com/fantazjabraniewo/posts/pfbid0882yffM23HZJ6puJBQuRYCjvyrdfVBgYF9G63t1UUDU7A1Y8hTLDJZxK7JcM8ES2l"
+data-width="600">
+</div>
+
 </section>
 
 <section class="section" id="qr">
-  <h2 data-i18n="scan">📲 Zeskanuj, aby zobaczyć menu</h2>
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fkajak84.github.io%2Fspichlerz-z-fantazja%2Fmenu.html" alt="Kod QR do menu">
+
+<h2 data-i18n="scan">
+📲 Zeskanuj, aby zobaczyć menu
+</h2>
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https%3A%2F%2Fkajak84.github.io%2Fspichlerz-z-fantazja%2Fmenu.html"
+alt="Kod QR do menu restauracji"
+>
+
 </section>
 
 <footer>
-  &copy; 2025 Spichlerz z Fantazją
+© 2025 Spichlerz z Fantazją
 </footer>
 
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v17.0"></script>
 
-<div class="leaves-area" aria-hidden="true"></div>
-<template id="leaf-template"><div class="leaf"></div></template>
+<script async defer crossorigin="anonymous"
+src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v17.0">
+</script>
 
 <script>
-// -------- Intersection Observer --------
+
+/* ANIMACJE */
+
 const sections = document.querySelectorAll('.section');
+
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.2 });
+
+  entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+
+  });
+
+},{threshold:0.2});
+
 sections.forEach(sec => observer.observe(sec));
 
-// -------- Translations --------
-function setLanguage(lang) {
-  document.documentElement.lang = lang;
-  const translations = {
-    pl:{ title:"Spichlerz z Fantazją", subtitle:"Tradycja, smak i atmosfera w samym sercu Braniewa", aboutTitle:"O nas", aboutText:"Restauracja Spichlerz z Fantazją w Braniewie to jedno z najbardziej rozpoznawalnych miejsc gastronomicznych w mieście. Lokal znajduje się w historycznym spichlerzu i od wielu lat przyciąga zarówno mieszkańców Braniewa, jak i turystów odwiedzających region.
+/* TŁUMACZENIA */
 
-Osoby szukające informacji o restauracji najczęściej wpisują w Google frazy takie jak spichlerz braniewo, restauracja spichlerz braniewo, spichlerz z fantazją Braniewo czy gdzie zjeść w Braniewie. Ta strona została przygotowana właśnie po to, aby w jednym miejscu można było znaleźć wszystkie najważniejsze informacje o restauracji Spichlerz z Fantazją w Braniewie.
+function setLanguage(lang){
 
-W restauracji Spichlerz z Fantazją można zjeść tradycyjne dania kuchni polskiej, obiady domowe, a także potrawy przygotowywane na specjalne okazje. Restauracja często wybierana jest na rodzinne obiady, spotkania ze znajomymi oraz różnego rodzaju uroczystości okolicznościowe.
+document.documentElement.lang = lang;
 
-Dużą zaletą restauracji Spichlerz z Fantazją w Braniewie jest jej wyjątkowy klimat oraz lokalizacja w zabytkowym budynku spichlerza. Dzięki temu jest to jedno z najczęściej wyszukiwanych miejsc gastronomicznych w Braniewie.
+const translations = {
 
-Jeżeli szukasz miejsca na obiad w Braniewie albo chcesz sprawdzić menu restauracji Spichlerz z Fantazją, jesteś w dobrym miejscu. Restauracja od lat cieszy się popularnością i jest jednym z najbardziej znanych lokali gastronomicznych w Braniewie.", nasz: "Nasze danie dnia", scan:"📲 Zeskanuj, aby zobaczyć menu" },
-  
-  en:{ title:"Spichlerz z Fantazją", subtitle:"Restaurant Spichlerz z Fantazją in Braniewo is one of the most well-known dining places in the city. The restaurant is located in a historic granary building and for many years has attracted both residents of Braniewo and tourists visiting the region.
+pl:{
+title:"Spichlerz z Fantazją",
+subtitle:"Tradycja, smak i atmosfera w samym sercu Braniewa",
+aboutTitle:"O nas",
+aboutText:"Restauracja Spichlerz z Fantazją w Braniewie to wyjątkowe miejsce, które od lat przyciąga mieszkańców i turystów.",
+dish:"Nasze danie dnia",
+scan:"📲 Zeskanuj, aby zobaczyć menu"
+},
 
-People searching for information about the restaurant most often type phrases in Google such as “spichlerz braniewo”, “restaurant spichlerz braniewo”, “spichlerz z fantazją Braniewo” or “where to eat in Braniewo”. This website was created to provide all the most important information about the Restaurant Spichlerz z Fantazją in Braniewo in one place.
+en:{
+title:"Spichlerz z Fantazją",
+subtitle:"Tradition, taste and atmosphere in the heart of Braniewo",
+aboutTitle:"About us",
+aboutText:"Restaurant Spichlerz z Fantazją is a unique place located in a historic granary building in Braniewo.",
+dish:"Dish of the day",
+scan:"📲 Scan to see the menu"
+},
 
-At Restaurant Spichlerz z Fantazją you can enjoy traditional Polish cuisine, home-style meals, as well as dishes prepared for special occasions. The restaurant is often chosen for family lunches, meetings with friends and various special events.
+de:{
+title:"Spichlerz z Fantazją",
+subtitle:"Tradition und Geschmack im Herzen von Braniewo",
+aboutTitle:"Über uns",
+aboutText:"Das Restaurant Spichlerz z Fantazją befindet sich in einem historischen Speichergebäude.",
+dish:"Tagesgericht",
+scan:"📲 Menü ansehen"
+},
 
-A big advantage of Restaurant Spichlerz z Fantazją in Braniewo is its unique atmosphere and location in a historic granary building. Thanks to this, it is one of the most frequently searched dining places in Braniewo.
-
-If you are looking for a place to eat in Braniewo or want to check the menu of Restaurant Spichlerz z Fantazją, you are in the right place. The restaurant has been popular for many years and is one of the most recognizable dining places in Braniewo.", nasz: "Our dish of the day", scan:"📲 Scan to see the menu" },
-    
-  de:{ title:"Spichlerz z Fantazją", subtitle:"Tradition, Geschmack und Atmosphäre im Herzen von Braniewo", aboutTitle:"Über uns", aboutText:"Das Restaurant Spichlerz z Fantazją in Braniewo ist eines der bekanntesten gastronomischen Lokale in der Stadt. Das Restaurant befindet sich in einem historischen Speichergebäude und zieht seit vielen Jahren sowohl Einwohner von Braniewo als auch Touristen an, die die Region besuchen.
-
-Personen, die nach Informationen über das Restaurant suchen, geben in Google am häufigsten Suchbegriffe wie „spichlerz braniewo“, „restaurant spichlerz braniewo“, „spichlerz z fantazją Braniewo“ oder „wo kann man in Braniewo essen“ ein. Diese Website wurde erstellt, damit man alle wichtigsten Informationen über das Restaurant Spichlerz z Fantazją in Braniewo an einem Ort finden kann.
-
-Im Restaurant Spichlerz z Fantazją kann man traditionelle polnische Küche, Hausmannskost sowie Gerichte für besondere Anlässe genießen. Das Restaurant wird häufig für Familienessen, Treffen mit Freunden sowie verschiedene Feierlichkeiten gewählt.
-
-Ein großer Vorteil des Restaurants Spichlerz z Fantazją in Braniewo ist seine besondere Atmosphäre und die Lage in einem historischen Speichergebäude. Dadurch gehört es zu den am häufigsten gesuchten Restaurants in Braniewo.
-
-Wenn du nach einem Ort zum Essen in Braniewo suchst oder das Menü des Restaurants Spichlerz z Fantazją überprüfen möchtest, bist du hier genau richtig. Das Restaurant ist seit vielen Jahren sehr beliebt und gehört zu den bekanntesten gastronomischen Lokalen in Braniewo.", nasz: "Unser Tagesgericht", scan:"📲 Scannen Sie, um das Menü zu sehen" },
-  
-   
-    ua:{ title:"Spichlerz z Fantazją", subtitle:"Традиції, смак та атмосфера в самому серці Бранево", aboutTitle:"Про нас", aboutText:"Ресторан Spichlerz z Fantazją у Бранево є одним із найвідоміших закладів харчування в місті. Ресторан знаходиться в історичній будівлі старого зерносховища і вже багато років приваблює як мешканців Бранево, так і туристів, які відвідують цей регіон.
-
-Люди, які шукають інформацію про ресторан, найчастіше вводять у Google такі запити, як „spichlerz braniewo“, „restaurant spichlerz braniewo“, „spichlerz z fantazją Braniewo“ або „де поїсти в Бранево“. Цей сайт був створений для того, щоб у одному місці можна було знайти всю найважливішу інформацію про ресторан Spichlerz z Fantazją у Бранево.
-
-У ресторані Spichlerz z Fantazją можна скуштувати традиційні страви польської кухні, домашні обіди, а також страви, приготовані для особливих подій. Ресторан часто обирають для сімейних обідів, зустрічей з друзями та різних святкових заходів.
-
-Великою перевагою ресторану Spichlerz z Fantazją у Бранево є його унікальна атмосфера та розташування в історичній будівлі зерносховища. Завдяки цьому це один із найчастіше шуканих ресторанів у Бранево.
-
-Якщо ви шукаєте місце, де поїсти в Бранево, або хочете перевірити меню ресторану Spichlerz z Fantazją, ви в правильному місці. Ресторан уже багато років користується популярністю і є одним із найвідоміших закладів харчування в Бранево.", nasz: "Наша страва дня", scan:"📲 Скануйте, щоб побачити меню" }
-  };
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
-    const key = el.getAttribute('data-i18n');
-    if(translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
-  });
-  document.querySelectorAll('.language-switcher img').forEach(img=>img.classList.toggle('active', img.alt===lang));
-  localStorage.setItem('lang', lang);
+ua:{
+title:"Spichlerz z Fantazją",
+subtitle:"Традиції та смак у самому серці Бранево",
+aboutTitle:"Про нас",
+aboutText:"Ресторан Spichlerz z Fantazją знаходиться в історичній будівлі.",
+dish:"Страва дня",
+scan:"📲 Скануйте меню"
 }
-document.addEventListener('DOMContentLoaded', ()=>setLanguage(localStorage.getItem('lang')||'pl'));
 
-// -------- Resize Facebook Posts --------
-function resizeFacebookPosts() {
-  const container = document.getElementById('daily-special-container');
-  const fbPosts = container.querySelectorAll('.fb-post');
-  fbPosts.forEach(post => { post.setAttribute('data-width', container.offsetWidth); });
-  if (window.FB) FB.XFBML.parse(container);
+};
+
+document.querySelectorAll('[data-i18n]').forEach(el=>{
+
+const key = el.getAttribute('data-i18n');
+
+if(translations[lang][key]){
+el.textContent = translations[lang][key];
 }
+
+});
+
+document.querySelectorAll('.language-switcher img')
+.forEach(img => {
+img.classList.toggle('active', img.alt === lang);
+});
+
+localStorage.setItem('lang', lang);
+
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+
+setLanguage(localStorage.getItem('lang') || 'pl');
+
+/* FACEBOOK */
+
+function resizeFacebookPosts(){
+
+const container =
+document.getElementById('daily-special-container');
+
+if(!container) return;
+
+const posts = container.querySelectorAll('.fb-post');
+
+posts.forEach(post=>{
+post.setAttribute('data-width', container.offsetWidth);
+});
+
+if(window.FB){
+FB.XFBML.parse(container);
+}
+
+}
+
 window.addEventListener('load', resizeFacebookPosts);
 window.addEventListener('resize', resizeFacebookPosts);
 
-// -------- Catering Świąteczny --------
-document.addEventListener("DOMContentLoaded", function () {
-    const section = document.getElementById("catering-zima");
-    const month = new Date().getMonth() + 1;
-    if (!section) return;
-    if (month === 3 || month === 12) { 
-        section.classList.remove("hidden");
-        section.style.opacity = "0";
-        section.style.transform = "translateY(30px)";
-        section.style.transition = "opacity 1s ease, transform 1s ease";
-        requestAnimationFrame(() => {
-            section.style.opacity = "1";
-            section.style.transform = "translateY(0)";
-        });
-       setTimeout(() => {
-  if (window.FB && typeof FB.XFBML.parse === "function") {
-    FB.XFBML.parse(section);
-  }
-}, 500);
-});
+/* CATERING */
 
-// -------- Seasons, Leaves, Snow --------
-function autoDetectSeason() {
-  const month = new Date().getMonth() + 1;
-  if (month>=3 && month<=5) return "spring";
-  if (month>=6 && month<=8) return "summer";
-  if (month>=9 && month<=11) return "autumn";
-  return "winter";
+const section = document.getElementById('catering-zima');
+
+const month = new Date().getMonth() + 1;
+
+if(section && (month === 3 || month === 12)){
+
+section.classList.remove('hidden');
+
+setTimeout(()=>{
+
+if(window.FB){
+FB.XFBML.parse(section);
 }
 
-const seasons = {
-  spring: { colors: ['#a4d792','#c8f0c2','#8cd47e','#dfffe4'], svgs:['<svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="10" fill="currentColor"/></svg>'], minSize:20,maxSize:40 },
-  summer: { colors: ['#3fa34d','#2e7d32','#76c893','#4caf50'], svgs:['<svg viewBox="0 0 64 64"><path d="M32 4c8 12 16 24 0 40S8 16 16 4z" fill="currentColor"/></svg>'], minSize:25,maxSize:50 },
-  autumn: { colors: ['#b24b2f','#d97a3a','#f2c96d','#7a3f2a','#9c5b3a'], svgs:['<svg viewBox="0 0 64 64"><path d="M22 6c10 0 20 8 22 16s-2 20-12 24-22 0-26-12S12 6 22 6z" fill="currentColor"/></svg>'], minSize:28,maxSize:70 },
-  winter: { colors: ['#ffffff','#cfe8ff','#d6f0ff','#e0f7ff'], svgs:['<svg viewBox="0 0 64 64"><path d="M32 6l6 10 10 6-10 6-6 10-6-10-10-6 10-6z" fill="currentColor"/></svg>'], minSize:18,maxSize:40 }
-};
+},500);
 
-let currentSeason = localStorage.getItem('season') || autoDetectSeason();
-function setSeason(season){ currentSeason=season; localStorage.setItem('season',season); clearLeaves(); }
-function clearLeaves(){ document.querySelectorAll('.leaf').forEach(l=>l.remove()); document.querySelectorAll('.snowflake').forEach(s=>s.remove()); }
+}
 
-// -------- Leaf & Snow Generator --------
-(function(){
-  const area = document.querySelector('.leaves-area');
-  const tpl = document.getElementById('leaf-template');
-  function rand(min,max){ return Math.random()*(max-min)+min; }
-  function createLeaf(){
-    if(!area) return;
-    const cfg = seasons[currentSeason] || seasons.autumn;
-    const node = tpl.content.firstElementChild.cloneNode(true);
-    const size=Math.round(rand(cfg.minSize,cfg.maxSize));
-    const left=Math.round(rand(0,100));
-    const duration=rand(8,20);
-    const swayDuration=rand(5,12);
-    const swayOffset=Math.round(rand(20,60));
-    const startRot=Math.round(rand(-45,45))+'deg';
-    const spinDeg=Math.round(rand(180,720))+'deg';
-    const color=cfg.colors[Math.floor(rand(0,cfg.colors.length))];
-    const svg=cfg.svgs[Math.floor(rand(0,cfg.svgs.length))];
-    node.style.left=left+'%';
-    node.style.width=size+'px';
-    node.style.color=color;
-    node.style.setProperty('--start-rot',startRot);
-    node.style.setProperty('--spin-deg',spinDeg);
-    node.style.setProperty('--sway-offset',swayOffset+'px');
-    node.style.animation=`fall ${duration}s linear forwards`;
-    const swayWrap=document.createElement('div');
-    swayWrap.style.width='100%'; swayWrap.style.height='100%'; swayWrap.style.display='block';
-    swayWrap.style.animation=`sway ${swayDuration}s ease-in-out infinite`;
-    swayWrap.innerHTML=svg;
-    node.appendChild(swayWrap);
-    area.appendChild(node);
-    setTimeout(()=>{ if(node && node.parentNode) node.remove(); }, duration*1000);
-  }
-  function createSnowflake(){
-    if(currentSeason!=='winter') return;
-    const flake=document.createElement('div'); flake.className='snowflake';
-    const size=rand(5,12); flake.style.fontSize=size+'px';
-    flake.style.left=rand(0,100)+'%';
-    flake.textContent='❄';
-    const dur=rand(6,20); flake.style.animation=`snowFall ${dur}s linear forwards`;
-    area.appendChild(flake);
-    setTimeout(()=>{ if(flake.parentNode) flake.remove(); }, dur*1000);
-  }
-  setInterval(()=>{ createLeaf(); createSnowflake(); }, 400);
-})();
+});
+
 </script>
 
 </body>
